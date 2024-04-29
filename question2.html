@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="back">
+        <button id="backbutt" onclick= "window.location.href='question1.html';">↩</button>
+    </div>
+    <div class="calc">
+        <span id="title">How do you travel to school or work?</span>
+        <input id="travel" type="text" placeholder="car, bus or bike">
+        <button onclick="enter()">Enter</button>
+        <span id="comment"> </span>
+    </div>
+    <br>
+    <div class="next">
+        <button id="nextbutt" onclick= "window.location.href='question3.html';">↪</button>
+    </div>
+    <script type="text/javascript" src="/eel.js"></script>
+    <script>
+        comment = document.getElementById("comment");
+        travel = document.getElementById("travel");
+        function enter() {
+            eel.calculatorT(travel.value)(funresult);
+        }
+        function funresult(x) {
+            comment.innerHTML =x;
+        }
+    </script>
+</body>
+</html>
